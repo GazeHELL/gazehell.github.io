@@ -70,7 +70,7 @@
   <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body has-text-centered">
-        <img src="static/images/architecture_01.png" alt="GAZEHELL: GAZE ESTIMATION" width="80%"/>
+        <img src="static/images/eyegaze.png" alt="GAZEHELL: GAZE ESTIMATION" width="80%"/>
         <h2 class="subtitle has-text-centered">
           An outline of the proposed approach towards eye gaze estimation. The three main components comprise of (A) An image reconstruction and denoising branch, (B) The gaze estimation regression branch, and (C) An auxiliary uncertainty branch.
           Finally, in (D) the supervision comes from a set of losses weighed by the predicted uncertanity.
@@ -84,11 +84,11 @@
             <h2 class="title is-3">Abstract</h2>
             <div class="content has-text-justified">
               <p>
-                In the pursuit of robust eye gaze estimation, traditional approaches often grapple with the limitations of either spatial granularity or model interpretability. [cite: 1]
-                This paper introduces a dual-architecture framework that synergizes the strengths of Vision Transformers (ViT) and convolutional networks to enhance gaze estimation accuracy and reliability. [cite: 2]
-                We also propose two novel loss functions to refine our predictions: (1) a differentiable heatmap-based 2D MSE loss that transforms gaze vectors into a spatial heatmap enhancing the model's ability to localize gaze with high precision, and (2) a Fourier encoding loss that leverages high-dimensional Fourier features to capture complex spatial relationships more effectively. [cite: 3]
-                Additionally, we incorporate auxiliary uncertainty-based task weighing into our losses to provide a measure of confidence alongside gaze estimates, aiming to improve predictions dynamically during training. [cite: 4]
-                Our experimental results on MPIIGaze and RT-GENE datasets demonstrate significant improvements over existing methods and establishes a new state-of-the-art benchmark on both, with upto 3% improvement in the respective datasets. [cite: 5]
+                In the pursuit of robust eye gaze estimation, traditional approaches often grapple with the limitations of either spatial granularity or model interpretability.
+                This paper introduces a dual-architecture framework that synergizes the strengths of Vision Transformers (ViT) and convolutional networks to enhance gaze estimation accuracy and reliability.
+                We also propose two novel loss functions to refine our predictions: (1) a differentiable heatmap-based 2D MSE loss that transforms gaze vectors into a spatial heatmap enhancing the model's ability to localize gaze with high precision, and (2) a Fourier encoding loss that leverages high-dimensional Fourier features to capture complex spatial relationships more effectively.
+                Additionally, we incorporate auxiliary uncertainty-based task weighing into our losses to provide a measure of confidence alongside gaze estimates, aiming to improve predictions dynamically during training.
+                Our experimental results on MPIIGaze and RT-GENE datasets demonstrate significant improvements over existing methods and establishes a new state-of-the-art benchmark on both, with upto 3% improvement in the respective datasets.
               </p>
             </div>
           </div>
@@ -102,17 +102,17 @@
             <h2 class="title is-3">GazeHELL</h2>
             <div class="content has-text-justified">
               <p>
-                GazeHELL is a cutting-edge architecture for gaze estimation that seamlessly integrates Vision Transformers (ViTs) and Convolutional Neural Networks (CNNs). This hybrid approach is further enhanced by the incorporation of innovative loss functions, including a differentiable Gaussian heatmap loss and a Fourier encoding-based loss. These losses are dynamically weighted during training using an auxiliary uncertainty-based mechanism. [cite: 26]
+                GazeHELL is a cutting-edge architecture for gaze estimation that seamlessly integrates Vision Transformers (ViTs) and Convolutional Neural Networks (CNNs). This hybrid approach is further enhanced by the incorporation of innovative loss functions, including a differentiable Gaussian heatmap loss and a Fourier encoding-based loss. These losses are dynamically weighted during training using an auxiliary uncertainty-based mechanism.
               </p>
               <h3 class="title is-4">Key Features:</h3>
               <ul>
-                <li>Dual Hybrid Encoder Architecture: Combining ViTs and CNNs to leverage their respective strengths in capturing global and local image features. [cite: 23]
+                <li>Dual Hybrid Encoder Architecture: Combining ViTs and CNNs to leverage their respective strengths in capturing global and local image features. 
                 </li>
-                <li>Heatmap Loss: A novel differentiable Gaussian heatmap loss for precise gaze localization. [cite: 24]
+                <li>Heatmap Loss: A novel differentiable Gaussian heatmap loss for precise gaze localization. 
                 </li>
-                <li>Fourier Encoding Loss: A Fourier encoding-based loss to capture high-frequency components, enhancing sensitivity to subtle gaze variations. [cite: 25]
+                <li>Fourier Encoding Loss: A Fourier encoding-based loss to capture high-frequency components, enhancing sensitivity to subtle gaze variations. 
                 </li>
-                <li>Uncertainty-Based Loss Weighting: An auxiliary network dynamically adjusts loss weights, improving model robustness and accuracy. [cite: 26]
+                <li>Uncertainty-Based Loss Weighting: An auxiliary network dynamically adjusts loss weights, improving model robustness and accuracy.
                 </li>
               </ul>
             </div>
@@ -123,21 +123,9 @@
         <h2 class="title is-3">Qualitative Results</h2>
         <div id="results-carousel" class="carousel results-carousel">
           <div class="item has-text-centered">
-            <img src="static/images/gaze_01.png" alt="Input Eye Image"/>
+            <img src="static/images/fmse.png" alt="Input Eye Image"/>
             <h2 class="subtitle has-text-centered">
-              Input Eye Image
-            </h2>
-          </div>
-          <div class="item has-text-centered">
-            <img src="static/images/gaze_02.png" alt="Ground Truth Gaze Vector"/>
-            <h2 class="subtitle has-text-centered">
-              Ground Truth Gaze Vector
-            </h2>
-          </div>
-          <div class="item has-text-centered">
-            <img src="static/images/gaze_03.png" alt="Gaze Prediction"/>
-            <h2 class="subtitle has-text-centered">
-              Gaze Prediction
+              Loss Surface Example of the proposed losses
             </h2>
           </div>
         </div>
@@ -150,7 +138,7 @@
 @article{dokania2024gazehell,
   title={GazeHELL: Gaze Estimation with Hybrid Encoders and Localised Losses with weighing},
   author={Dokania, Shubham and Singh, Vasudev and Ahmed, Shuaib},
-  journal={arXiv preprint arXiv:2409.06865},
+  conference={British Machine Vision Conference},
   year={2024}
 }
         </code></pre>
